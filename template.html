@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+    <head>
+        <style>
+         #header li {
+             list-style-type: none;
+             margin-left: 10px;
+         }
+         #header {
+             padding: 0;
+             display: flex;
+         }
+        </style>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <ul id="header">
+            <li>Ramesh</li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/projects.html">Projects</a>
+            </li>
+            <li>
+                <a href="/blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="/work_experience.html">Work Experience</a>
+            </li>
+            <li>
+                <a href="/contact.html">Contact</a>
+            </li>
+        </ul>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
