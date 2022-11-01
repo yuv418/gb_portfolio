@@ -22,7 +22,11 @@ for page in pages:
     html = "{% extends 'template.html' %}{% block content %}" + html + "{% endblock %}"
     j_page = j_env.from_string(html)
     with open(f"output/{page}.html", 'w') as html_f:
-        html_f.write(j_page.render())
+        page_title = page.title()
+        if page == "index":
+                page_title = "Home"
+        page_title = page_title.replace("_", " ")
+        html_f.write(j_page.render(title=page_title))
 
 distutils.dir_util.copy_tree("assets", "output/assets")
 
