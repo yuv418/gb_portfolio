@@ -3,6 +3,7 @@
 import jinja2
 import mistune
 import os
+import distutils
 
 pages = ["index", "contact", "blog", "projects", "work_experience"]
 try:
@@ -22,3 +23,6 @@ for page in pages:
     j_page = j_env.from_string(html)
     with open(f"output/{page}.html", 'w') as html_f:
         html_f.write(j_page.render())
+
+distutils.dir_util.copy_tree("assets", "output/assets")
+
