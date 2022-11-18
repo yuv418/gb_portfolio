@@ -8,3 +8,5 @@ my résumé is also available upon request.
 
 I look forward to talking with you!
 
+You can also find my programming portfolios here:
+[GitHub](https://github.com/yuv418), [GitLab](https://gitlab.com/cdknight)

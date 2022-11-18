@@ -23,10 +23,13 @@ for page in pages:
     j_page = j_env.from_string(html)
     with open(f"output/{page}.html", 'w') as html_f:
         page_title = page.title()
+        show_comments = True
         if page == "index":
                 page_title = "Home"
+        if page == "index" or page == "contact":
+                show_comments = False
         page_title = page_title.replace("_", " ")
-        html_f.write(j_page.render(title=page_title))
+        html_f.write(j_page.render(title=page_title, show_comments=show_comments))
 
 distutils.dir_util.copy_tree("assets", "output/assets")
 
